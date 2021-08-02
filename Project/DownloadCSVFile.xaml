@@ -1,0 +1,192 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="DownloadCSVFile" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="File" Type="OutArgument(si:FileInfo)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>947,1799</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>DownloadCSVFile_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="33">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="54">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="DownloadCSVFile" sap:VirtualizedContainerService.HintSize="594,1634" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Search BSBs" sap:VirtualizedContainerService.HintSize="552,1542" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="IfNotOpen" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence sap:VirtualizedContainerService.HintSize="518,1326" sap2010:WorkflowViewState.IdRef="Sequence_8">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,1232" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+              <uix:NClick ClickType="Single" DisplayName="Click 'Download BSB Files'" sap:VirtualizedContainerService.HintSize="434,166" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://bsb.auspaynet.com.au/" DesignTimeRectangle="744, 531, 150, 19" ElementType="Button" FriendlyName="'Download BSB Files'" FullSelectorArgument="&lt;webctrl id='view:_id1:_id2:btDownload' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='view:_id1:_id2:btDownload' tag='BUTTON' type='button' aaname='Download BSB Files' check:text='Download BSB Files' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJoAAAAXCAYAAADz0VYRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALGSURBVGhD7ZXNcdwwDIXdRjpJNWnCDaQQF5LL1uCbrykghz3mKBMwoDw8glppf+hMgjfzJisRIAngs/K0lEoTVKCVpmgF7eu3L+Xy3e0KoD19by/K5Tu5QCtPcYFWnuL7gvZjWc62R9CvJPaRfv049iVbu9Fvbd+3tn+3Nqj9/LOPlT1Qp5bra88tPhPGsF9af1NZ30+//9wDf8/0Q0DjpmhjZ8L2iaCF2u0dxkt+GDTlKWgNhmdf93dNo3oUtI3+/jegDd8/yn8LaM1hsIMYAcVjMtAu9e8SaOh/G7RmHlD4LwIaK3FrPu9nzwKQN1fiXWscg2Z5Lr6fNB8VALW9VHbe0S8avpP8rUEPv2gMH/iWL5rmunAPu7srrfmAp4EWCiQQdNBWJP91nyFPGw5xIj9Ln1usDoP2RzgccF/DPcU8iCx3CzRWF2t3c/G6n8EK8JMDLC7vRfMIND1rI269m9W2dYdL/hTQtDEwXAQDBy9xp7Z2tmcsnvcITYP9GDrx8KtkaytoR3IHtYf9yAiI5/Hw1XaPrK/irp9kBiiFSSzn2Nmy1t3jBk8DDQeExaqtkTpQ20N+S072r+TsBS0bHN7FY13dF5Ryu+G4B7Wn4JC1FosZxXc9A18LmvQhk/dYYlcldzriOaDZMP191xgAQ56lQPySSfxJBgA5e0HjvcUIGg8wPF/IDd4Bmv6GOw9jvA4w3xN9LWjyO60lsdQ9On+Pp4CmfznYCBqgFMwQ8ZdFnrEpu0FrRjg0DtbC2ZaHDQ0NtvUjoIV8i+GBYUwKmp3b/QGbrwWNz9J97Bl75nl7ocz8ENBY3FixD1wFxap5oPaMX5YjoPG9wsAsVtX264aGudLsUcMHtWcAyBBRuF/oC2hryNeCJtZc0KhnW/vv8X1BK5cHLtDKU1yglae4QCtP8RC0cvnedq2glUqPVIFWmqBleQcO5heAjIH3VAAAAABJRU5ErkJggg==" InformativeScreenshot="4a8148bb10a18eba2e4e3ceb9d8a9011.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Search BSBs' /&gt;" SearchSteps="FuzzySelector, Image">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="904, 531, 50, 19" ElementType="Button" FriendlyName="'FTP'" FullSelectorArgument="&lt;webctrl id='view:_id1:_id2:button3' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='view:_id1:_id2:button3' tag='BUTTON' type='button' aaname='FTP' check:text='FTP' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADYAAAAXCAYAAABAtbxOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACYSURBVFhH7ZTBDYAgDEWd1Fk8uZK6hG6gAzCAx0oNGEQIGDnQ2p+8C22BlxAaYBr+Yv3QssDmJtZ1QBoRo0YxMWVm/agFYI4VMbqG87GedXyelUNRMZQI1VxOASOTWp82vI2uOWu5VC2G5O7rI2Ip8AJ+dv2U/L43YnyeYiAsP48viFgKEaMmVhsiRo3/iXHA5hLjFqZiAAenWsME3EV8EQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+              </uix:NClick>
+              <Delay DisplayName="Delay 5s" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+              <ui:GetLastDownloadedFile DisplayName="Wait for Download" DownloadFolder="C:\Users\CONFIRMZ\Downloads" File="[File]" sap:VirtualizedContainerService.HintSize="434,405" sap2010:WorkflowViewState.IdRef="GetLastDownloadedFile_2" Timeout="900">
+                <ui:GetLastDownloadedFile.Body>
+                  <ActivityAction>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'IMG'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+                        <ui:Click.CursorPosition>
+                          <ui:CursorPosition Position="Center">
+                            <ui:CursorPosition.OffsetX>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetX>
+                            <ui:CursorPosition.OffsetY>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetY>
+                          </ui:CursorPosition>
+                        </ui:Click.CursorPosition>
+                        <ui:Click.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a1e5e5d3-aec2-4f10-916a-9651aff41782" InformativeScreenshot="8915dbdaf72c274d3979fbf4c5420bf1" Selector="&lt;webctrl parentid='view:_id1:_id2:dlgFilesDownload:_content:form1:computedField6' tag='IMG' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:Click.Target>
+                      </ui:Click>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:GetLastDownloadedFile.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:GetLastDownloadedFile>
+              <uix:NClick ClickType="Single" DisplayName="Click 'Close'" sap:VirtualizedContainerService.HintSize="434,166" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://bsb.auspaynet.com.au/" DesignTimeRectangle="622, 489, 174, 19" ElementType="Button" FriendlyName="'Close'" FullSelectorArgument="&lt;webctrl id='view:_id1:_id2:dlgFilesDownload:_content:form1:btClose' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='view:_id1:_id2:dlgFilesDownload:_content:form1:btClose' tag='BUTTON' type='button' aaname='Close' check:text='Close' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALIAAAAXCAYAAACvWxU1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFaSURBVHhe7ZldboMwEAa5IFJO0INEPPcS5B6VyDnywCk4whbbtfE6QLpIjYQ7nzRS4p/wMiyL0wghFQSRSRVJIn9+fQCcjhgl8jRNAKcBkaEKEBmqAJEPMUjXNNIkOhmy+eE6j12HbD38NYhs5dFLO8vb3sY0Nt5aJTMivx9ENrIu6Sj9ZZEbkd8PIpsILUV3X5tbKEUOFXsec1x6Gcu1G3N7+0CDyBZ8W9FK/1iZy1Ai37tZxNh2hMqt5jJB3b7Usqh9VPlXILKFAyI/CZgL6j+vV3gltcNfW79UwgIim7C2Frp39hSVNsocCb/9U7mz8cDrm+i/gshGth7xW1X4aX0pckZ++uH2qRsAdkFkKyvHb0HOpVoqeZW4ukf24uYvcW5t/F4IXx7xgQaRD2H7Q+TXpxZF66D20VbsgshQBYgMVYDIUAWIDFWwKTLA2YhJIhNy5iAyqSAi34iokP6fG3ynAAAAAElFTkSuQmCC" InformativeScreenshot="08b1bb66a3f8cc8e7f7f5133b1a98ce0.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Search BSBs' /&gt;" SearchSteps="FuzzySelector, Image">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target DesignTimeRectangle="622, 489, 353, 29" FriendlyName="'Close'" FullSelectorArgument="&lt;webctrl aaname=' ' parentid='view:_id1:_id2:dlgFilesDownload:_content:form1' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' ' parentid='view:_id1:_id2:dlgFilesDownload:_content:form1' tag='DIV' type='' check:text='Close' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAWUAAAAhCAYAAAABO7p1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHbSURBVHhe7dtRbtpAGIVRNoiUFWQhEc/dBNlHJbKOPLAKljDBdjEzjsEmUpKZv+dIV2oxTt++WgPZJACqIcoAFRmj/Ofvs1lzg2iKKJ9OJ7NmJspEJMrW7ESZiETZmp0oE5Eor94h7TabtBm3S4fs+uHl/NrLIXu/ffdEmYhEec3e92l7DvH29Ti+dnzdFmEW5Z+fKBORKK/YfHCPaf90DbUo//xEmYhEeXHDscXube7addMoD0/S59e6Pe3TcfreG9fu3WflRJmIRHlp/dHFNu3fZ65lK6L8tjtH9XK0MTxRF9ey2Hb3jccixX2evpcmykQkykv7QpQ/xTSPbf/n+SfvItDd+n+7/EDRrhNlIhLlxT16fFGeNfebPAFfwnzZ8LP/PVFnrw9b/g/hf50oE5Eor9itY4RbT8ef3j+Ncrb8WxzdfUXM7e5EmYhEec1mvhI3hPb6FFuEuIhweabcRzj/AK977+Xvk3hPv3Zn5USZiER59R775ZHV376YHE8U9zm6uDtRJiJRtmYnykQkytbsRJmIRNmanSgTkShbsxNlIiqibNbaIJoxygD8PlEGqIgoA1RElAEqIsoAFRFlgIqIMkBFRBmgIqIMUBFRBqiIKANURJQBqpHSB2FsO+o2VaWqAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NClick.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NClick>
+              <ui:CopyFile ContinueOnError="{x:Null}" Destination="Data\Downloaded File" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="[path.Combine(file.DirectoryName,file.Name)]" />
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1616, 876" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="b48cfc61c69b09df794bae9f9ed04cbb.png" Selector="&lt;html app='chrome.exe' title='Search BSBs'/&gt;" Url="https://bsb.auspaynet.com.au/" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
